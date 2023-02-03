@@ -18,13 +18,16 @@
 				<div id="div-equipos-form">
 					<form id="equipos-form" class="equipos-form">
 						<label for="equipo-a-input">Nombre del equipo A</label>
-						<input id="equipo-a-input" name="equipo-a" type="text" required>
+						<input id="equipo-a-input" class="equipo-input" name="equipo-a" type="text"
+							required>
 
 						<label for="equipo-a-input">Nombre del equipo B</label>
-						<input id="equipo-a-input" name="equipo-b" type="text" required>
+						<input id="equipo-a-input" class="equipo-input" name="equipo-b" type="text"
+							required>
 
 						<label for="equipo-a-input">Nombre del equipo C</label>
-						<input id="equipo-a-input" name="equipo-c" type="text" required>
+						<input id="equipo-a-input" class="equipo-input" name="equipo-c" type="text"
+							required>
 
 						<button id="actualizar-btn" type="submit">Actualizar Listas</button>
 					</form>
@@ -39,20 +42,23 @@
 				<h2 class="partidos-titulo">Registrar Partido</h2>
 				<form id="partidos-form">
 					<label for="equipo-local-select">Equipo Local</label>
-					<select id="equipo-local-select">
-						<option disabled selected value>- Selecciona equipo -</option>
+					<select id="equipo-local-select" class="equipo-select" name="equipo-local">
+						<option disabled selected value>- Selecciona Equipo -</option>
 					</select>
 
 					<label for="equipo-visitante-select">Equipo Visitante</label>
-					<select id="equipo-visitante-select">
-						<option disabled selected value>- Selecciona equipo -</option>
+					<select id="equipo-visitante-select" class="equipo-select"
+						name="equipo-visitante">
+						<option disabled selected value>- Selecciona Equipo -</option>
 					</select>
 
 					<label for="goles-local-input">Goles Local</label>
-					<input id="goles-local-input" type="number">
+					<input id="goles-local-input" class="goles-input" name="goles-local"
+						type="number" min="0" max="10" required>
 
 					<label for="goles-visitante-input">Goles Visitante</label>
-					<input id="goles-visitante-input" type="number">
+					<input id="goles-visitante-input" class="goles-input" name="goles-visitante"
+						type="number" min="0" max="10" required>
 
 					<button id="jugar-btn" type="submit">Jugar</button>
 				</form>
@@ -75,34 +81,34 @@
 					</thead>
 					<tbody>
 						<tr id="row-equipo-a">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr id="row-equipo-b">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 						<tr id="row-equipo-c">
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
 						</tr>
 					</tbody>
 				</table>
