@@ -1,5 +1,6 @@
 var equipos = []
 var partidos = []
+var resultados = []
 
 const equiposForm = document.querySelector('#equipos-form')
 const partidosForm = document.querySelector('#partidos-form')
@@ -83,6 +84,48 @@ const jugar = () => {
 }
 
 const publicarResultados = () => {
+	equipos.forEach(equipo => {
+		let pj = 0,
+			pg = 0,
+			pe = 0,
+			pp = 0,
+			gf = 0,
+			gc = 0,
+			puntos = 0
+		for (const partido of partidos) {
+			if (equipo === partido.equipoLocal) {
+				pj++
+				gf += partido.golesLocal
+				gc += partido.golesVisitante
+				if (partido.golesLocal > partido.golesVisitante) {
+					pg++
+					puntos += 3
+				} else if (partido.golesLocal < partido.golesVisitante) {
+					pp++
+				} else {
+					pe++
+					puntos++
+				}
+			} else if (equipo === partido.equipoVisitante) {
+				pj++
+				gf += partido.golesVisitante
+				gc += partido.golesLocal
+				if (partido.golesLocal > partido.golesVisitante) {
+					pp++
+				} else if (partido.golesLocal < partido.golesVisitante) {
+					pg++
+					puntos += 3
+				} else {
+					pe++
+					puntos++
+				}
+			}
+		}
+		resultados.push([equipo, pj, pg, pe, pp, gf, gc])
+	})
+}
+
+const llenarTablaResultados = () => {
 	const rowEquipoA = document.querySelector('#row-equipo-a')
 	const rowEquipoB = document.querySelector('#row-equipo-b')
 	const rowEquipoC = document.querySelector('#row-equipo-c')
@@ -91,10 +134,12 @@ const publicarResultados = () => {
 	rowEquipoB.innerHTML = ''
 	rowEquipoC.innerHTML = ''
 
-	partidos.forEach(partido => {
+	resultados.forEach( => {
 
 	})
 }
+
+
 
 equiposForm.addEventListener('submit', e => {
 	e.preventDefault()
