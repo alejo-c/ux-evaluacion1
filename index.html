@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Triangular de FOOTBALL</title>
+		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body>
@@ -17,13 +18,13 @@
 				<div id="div-equipos-form">
 					<form id="equipos-form">
 						<label for="equipo-a-input">Nombre del equipo A</label>
-						<input id="equipo-a-input" type="text" required>
+						<input id="equipo-a-input" name="equipo-a" type="text" required>
 
 						<label for="equipo-a-input">Nombre del equipo B</label>
-						<input id="equipo-a-input" type="text" required>
+						<input id="equipo-a-input" name="equipo-b" type="text" required>
 
 						<label for="equipo-a-input">Nombre del equipo C</label>
-						<input id="equipo-a-input" type="text" required>
+						<input id="equipo-a-input" name="equipo-c" type="text" required>
 
 						<button id="actualizar-btn" type="submit">Actualizar Listas</button>
 					</form>
@@ -38,41 +39,76 @@
 				<h2>Registrar Partido</h2>
 				<form id="partidos-form">
 					<label for="equipo-local-select">Equipo Local</label>
-					<select id="equipo-local-select"></select>
+					<select id="equipo-local-select">
+						<option disabled selected value></option>
+					</select>
 
 					<label for="equipo-visitante-select">Equipo Visitante</label>
-					<select id="equipo-visitante-select"></select>
+					<select id="equipo-visitante-select">
+						<option disabled selected value></option>
+					</select>
 
 					<label for="goles-local-input">Goles Local</label>
-					<select id="goles-local-input"></select>
+					<input id="goles-local-input" type="number">
 
 					<label for="goles-visitante-input">Goles Visitante</label>
-					<select id="goles-visitante-input"></select>
+					<input id="goles-visitante-input" type="number">
 
 					<button id="jugar-btn" type="submit">Jugar</button>
 				</form>
 			</div>
 
-			<div id="div-resultados">
+			<section id="div-resultados">
 				<table id="resultados-table">
 					<thead>
 						<tr>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
+							<th>Equipo</th>
+							<th>PJ</th>
+							<th>PG</th>
+							<th>PE</th>
+							<th>PP</th>
+							<th>GF</th>
+							<th>GC</th>
+							<th>Puntos</th>
 						</tr>
 					</thead>
 					<tbody>
-
+						<tr id="row-equipo-a">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr id="row-equipo-b">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr id="row-equipo-c">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
 					</tbody>
 				</table>
-			</div>
+			</section>
 		</main>
+
+		<script src="app.js"></script>
 	</body>
 
 </html>
