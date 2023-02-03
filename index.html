@@ -12,11 +12,11 @@
 	<body>
 		<h1>UDENAR - 2022</h1>
 
-		<main>
-			<div id="div-equipos">
-				<h2>Triangular de FOOTBALL</h2>
+		<main class="main-container">
+			<section id="div-equipos" class="div-equipos">
+				<h2 class="equipos-titulo">Triangular de FOOTBALL</h2>
 				<div id="div-equipos-form">
-					<form id="equipos-form">
+					<form id="equipos-form" class="equipos-form">
 						<label for="equipo-a-input">Nombre del equipo A</label>
 						<input id="equipo-a-input" name="equipo-a" type="text" required>
 
@@ -33,19 +33,19 @@
 				<div id="div-imagen-equipos">
 
 				</div>
-			</div>
+			</section>
 
-			<div id="div-partidos">
-				<h2>Registrar Partido</h2>
+			<section id="div-partidos" class="div-partidos">
+				<h2 class="partidos-titulo">Registrar Partido</h2>
 				<form id="partidos-form">
 					<label for="equipo-local-select">Equipo Local</label>
 					<select id="equipo-local-select">
-						<option disabled selected value></option>
+						<option disabled selected value>- Selecciona equipo -</option>
 					</select>
 
 					<label for="equipo-visitante-select">Equipo Visitante</label>
 					<select id="equipo-visitante-select">
-						<option disabled selected value></option>
+						<option disabled selected value>- Selecciona equipo -</option>
 					</select>
 
 					<label for="goles-local-input">Goles Local</label>
@@ -56,9 +56,10 @@
 
 					<button id="jugar-btn" type="submit">Jugar</button>
 				</form>
-			</div>
+			</section>
 
 			<section id="div-resultados">
+				<h2>Tabla de Resultados</h2>
 				<table id="resultados-table">
 					<thead>
 						<tr>
