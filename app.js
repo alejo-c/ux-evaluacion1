@@ -123,20 +123,19 @@ const publicarResultados = () => {
 		}
 		resultados.push([equipo, pj, pg, pe, pp, gf, gc])
 	})
+
+	llenarTablaResultados()
 }
 
 const llenarTablaResultados = () => {
-	const rowEquipoA = document.querySelector('#row-equipo-a')
-	const rowEquipoB = document.querySelector('#row-equipo-b')
-	const rowEquipoC = document.querySelector('#row-equipo-c')
+	const rowEquipos = document.querySelectorAll('.row-equipo')
 
-	rowEquipoA.innerHTML = ''
-	rowEquipoB.innerHTML = ''
-	rowEquipoC.innerHTML = ''
-
-	resultados.forEach( => {
-
-	})
+	for (let i = 0; i < 3; i++) {
+		rowEquipos[i].innerHTML = ''
+		resultados[i].forEach(campo => {
+			rowEquipos[i].innerHTML += `<td>${campo}</td>`
+		})
+	}
 }
 
 
