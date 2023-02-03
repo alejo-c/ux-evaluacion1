@@ -8,6 +8,7 @@
 body{
     background-color: rgb(255, 255, 255);
     font-family: "Tahoma";
+
 }
 
 form{
@@ -16,29 +17,74 @@ form{
     padding: 10px;
     border: 4px navy solid;
     border-radius: 10px;
-}
-
-.head {
-    border: 1px solid black;
-    background-color: rgb(33, 118, 216);
-}
-
-.div-equipos {
-    border: 1px solid rgb(231, 131, 17);
     display: flex;
     flex-direction: column;
+    text-align: left;
+}
+
+h1 {
+    border: 1px solid black;
+    background-color: rgb(33, 118, 216);
+    text-align: center;
+    color: white;
+    padding-bottom: 3rem;
 
 }
 
+/* h2 {
+    text-align: center;
+} */
+
+.div-equipos {
+    border: 3px solid rgb(145, 17, 231);
+    display: block;
+
+}
+
+.equipos-titulo {
+    color: rgb(31, 109, 224);
+    text-align: center;
+
+}
 .main-container {
-    border: 1px solid rgb(30, 17, 212);
+    border: 3px solid rgb(17, 212, 92);
+    /* width: 900px; */
+    text-align: center;
 
 }
 
-title {
-    color: blue;
+#div-equipos-form {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
 }
 
+#div-partidos {
+    border: 3px solid rgb(226, 34, 34);
+
+}
+
+#actualizar-btn {
+    background-color: rgb(34, 147, 223);
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    color: hsl(0deg, 0%, 100%);
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+
+#actualizar-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+
+}
 table {
     /*border: 2px lack solid;*/
     border: 2px solid black;
